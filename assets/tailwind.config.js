@@ -15,6 +15,26 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
+        primary: "#8C67FF",
+        secondary: "#1ED760",
+        dark: {
+          900: "#0A0A0A",
+          800: "#121212",
+          700: "#1A1A1A",
+          600: "#242424",
+        },
+      },
+      borderRadius: {
+        none: "0px",
+        sm: "4px",
+        DEFAULT: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "20px",
+        "2xl": "24px",
+        "3xl": "32px",
+        full: "9999px",
+        button: "8px",
       },
     },
   },
