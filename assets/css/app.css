@@ -3,3 +3,140 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+/* Custom styles */
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+:where([class^="ri-"])::before {
+  content: "\f3c2";
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hero-bg {
+  background-image: linear-gradient(
+      rgba(4, 16, 31, 0.85),
+      rgba(27, 28, 30, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1420161900862-9a86fa1f5c79?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjJ8fGNvbGxhYm9yYXRpdmUlMjBtdXNpYyUyMGxpc3RlbmluZyUyMGZyaWVuZHN8ZW58MHx8MHx8fDA%3D");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
+
+.anywhere-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(140, 103, 255, 0.1),
+    rgba(30, 215, 96, 0.1)
+  );
+}
+
+.hero-gradient-text {
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #e2e8f0 25%,
+    #8b5cf6 50%,
+    #7c3aed 75%,
+    #6366f1 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: gradientShift 8s ease-in-out infinite;
+}
+
+.feature-card {
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card {
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: scale(1.02);
+}
+
+.music-visualizer {
+  display: flex;
+  align-items: flex-end;
+  height: 25px;
+  gap: 3px;
+}
+
+.visualizer-bar {
+  width: 4px;
+  background-color: #8c67ff;
+  border-radius: 1px;
+  animation: visualize 0.8s infinite alternate;
+}
+
+.visualizer-bar:nth-child(1) {
+  height: 100%;
+  animation-delay: 0s;
+}
+.visualizer-bar:nth-child(2) {
+  height: 100%;
+  animation-delay: 0.1s;
+}
+.visualizer-bar:nth-child(3) {
+  height: 100%;
+  animation-delay: 0.2s;
+}
+.visualizer-bar:nth-child(4) {
+  height: 100%;
+  animation-delay: 0.3s;
+}
+.visualizer-bar:nth-child(5) {
+  height: 100%;
+  animation-delay: 0.4s;
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes visualize {
+  0% {
+    height: 5px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .music-visualizer {
+    height: 32px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .music-visualizer {
+    height: 40px;
+  }
+}
